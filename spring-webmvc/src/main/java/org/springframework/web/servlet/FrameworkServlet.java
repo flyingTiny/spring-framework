@@ -964,6 +964,7 @@ public abstract class FrameworkServlet extends HttpServletBean {
 		}
 
 		finally {
+			//Clear request attributes and reset thread-bound context
 			resetContextHolders(request, previousLocaleContext, previousAttributes);
 			if (requestAttributes != null) {
 				requestAttributes.requestCompleted();
